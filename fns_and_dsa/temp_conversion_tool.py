@@ -1,6 +1,6 @@
 # Global Conversion Factors
-FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
-CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
+FAHRENHEIT_TO_CELSIUS_FACTOR = 5/9
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9/5
 
 # Function to convert Fahrenheit to Celsius
 def convert_to_celsius(fahrenheit):
@@ -14,7 +14,7 @@ def convert_to_fahrenheit(celsius):
 def main():
     try:
         temp_input = input("Enter the temperature to convert: ")
-        temperature = float(temp_input)  # Validate numeric input
+        temperature = float(temp_input)  # Validates if input is numeric
 
         unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
 
@@ -26,9 +26,9 @@ def main():
             print(f"{temperature}°C is {converted}°F")
         else:
             raise ValueError("Invalid temperature unit. Please enter 'C' or 'F'.")
-    except ValueError as e:
-        print(f"Error: {e}\nInvalid temperature. Please enter a numeric value.")
+    except ValueError:
+        print("Invalid temperature. Please enter a numeric value.")
 
-# Run the program
+# Run the main function
 if __name__ == "__main__":
     main()
